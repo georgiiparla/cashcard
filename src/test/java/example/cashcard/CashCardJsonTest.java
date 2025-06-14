@@ -1,6 +1,5 @@
 package example.cashcard;
 
-
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,7 +47,7 @@ class CashCardJsonTest {
         String expected = """
                 {
                     "id": 99,
-                    "amount": 123.45, 
+                    "amount": 123.45,
                     "owner": "sarah1"
                 }
                 """;
@@ -70,7 +69,7 @@ class CashCardJsonTest {
                      {"id": 99, "amount": 123.45 , "owner": "sarah1"},
                      {"id": 100, "amount": 1.00 , "owner": "sarah1"},
                      {"id": 101, "amount": 150.00, "owner": "sarah1"}
-                                                  
+
                 ]
                 """;
         assertThat(jsonList.parse(expected)).isEqualTo(cashCards);
